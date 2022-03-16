@@ -8,8 +8,15 @@ h1 {
   color: #244751;
 }
 
-#to {
-  margin-top: 1em;
+#to{
+  margin-top: .5em;
+  padding: .4em;
+  width: 14em;
+}
+
+#input{
+  padding: .4em;
+  width: 14.4em;
 }
 
 ul {

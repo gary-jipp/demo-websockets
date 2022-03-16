@@ -8,6 +8,9 @@ $(function() {
 
   $("#send").on('click', () => {
     const text = $("#input").val();
+    if (!text) {
+      return;
+    }
     console.log("Click", text);
 
     const to = $("#to").val();
