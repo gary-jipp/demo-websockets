@@ -11,8 +11,7 @@ $(function() {
     if (!text) {
       return;
     }
-    console.log("Click", text);
-
+    
     const to = $("#to").val();
     console.log("to=", to);
 
