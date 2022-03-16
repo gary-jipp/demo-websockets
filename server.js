@@ -16,7 +16,7 @@ const ioServer = socketio(http);
 // Our database of client.id's with email as key
 const users = {};
 
-const removeClient = function(id) {
+const removeUser = function(id) {
   for (const email in users) {
     if (users[email] == id) {
       delete users[email];
@@ -31,7 +31,7 @@ ioServer.on('connection', client => {
   // Listen for disconnect events from this client
   client.on('disconnect', () => {
     console.log("disconnected: ", client.id);
-    removeClient(client.id);
+    removeUser(client.id);
   });
 
   // Listen for "message" events from this client
@@ -66,5 +66,5 @@ ioServer.on('connection', client => {
       ioServer.to(id).emit("private", text);   // Send to that id
     }
   });
-  
+
 });
